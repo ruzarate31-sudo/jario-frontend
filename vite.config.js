@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/jario-frontend/',
+  base: '/project-jario-frontend/',
   plugins: [react()],
 })
