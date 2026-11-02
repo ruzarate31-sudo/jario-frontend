@@ -1,0 +1,40 @@
+.sentence-card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 5px 18px rgb(16 43 70 / 5%);
+}
+
+.sentence-card__text {
+  color: var(--text-h);
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.sentence-card__translations {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  color: var(--text);
+  list-style: none;
+}
+
+.sentence-card__translation-note,
+.sentence-card__credit {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.sentence-card__translation-note {
+  margin-top: 10px;
+}
+
+.sentence-card__credit {
+  margin-top: 14px;
+}
+
+.sentence-card__credit a {
+  color: var(--green);
+}

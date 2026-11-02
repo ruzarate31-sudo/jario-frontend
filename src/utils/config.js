@@ -1,0 +1,1 @@
+export const MAX_TRANSLATIONS_PER_SENTENCE = 2

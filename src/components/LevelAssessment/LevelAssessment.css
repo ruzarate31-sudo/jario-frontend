@@ -1,0 +1,266 @@
+.level-assessment {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  align-items: start;
+  gap: clamp(36px, 6vw, 80px);
+  margin: clamp(88px, 12vw, 144px) 0 0;
+  padding: clamp(28px, 5vw, 64px);
+  border-radius: 30px;
+  background-color: #f2efe2;
+  background-image:
+    linear-gradient(rgb(242 239 226 / 76%), rgb(242 239 226 / 76%)),
+    url('../../images/colombian-horizon.jpg');
+  background-position: center;
+  background-size: cover;
+  scroll-margin-top: 32px;
+}
+
+.level-assessment__intro {
+  position: sticky;
+  top: 32px;
+  padding-top: 28px;
+}
+
+.level-assessment__eyebrow {
+  margin: 0 0 12px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.level-assessment__heading {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(34px, 4vw, 52px);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.level-assessment__description,
+.level-assessment__reassurance {
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.level-form {
+  min-width: 0;
+  padding: clamp(24px, 3.2vw, 40px);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.level-form__heading {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: 23px;
+  letter-spacing: -0.035em;
+}
+
+.level-form__profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.level-form__field {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.level-form__field input,
+.level-form__field select,
+.level-form__field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--navy);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.level-form__field textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.level-form__field input::placeholder,
+.level-form__field textarea::placeholder {
+  color: #75808c;
+  opacity: 1;
+}
+
+.level-form__field input:focus-visible,
+.level-form__field select:focus-visible,
+.level-form__field textarea:focus-visible,
+.level-form__choices label:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.level-form__field--wide {
+  margin-top: 20px;
+}
+
+.level-form__question {
+  min-width: 0;
+  margin: 18px 0 0;
+  padding: 18px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.level-form__question legend {
+  padding: 0;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.level-form__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.level-form__choices label {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--navy);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.level-form__choices input {
+  accent-color: var(--green);
+}
+
+.level-form__submit {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.level-form__submit:hover {
+  transform: translateY(-2px);
+  background: #c91e32;
+}
+
+.level-form__submit:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.level-form__result {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #b8d8c4;
+  border-radius: 16px;
+  background: #eef8f1;
+  color: var(--navy);
+}
+
+.level-form__result-label {
+  margin: 0;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.level-form__result h4 {
+  margin: 8px 0;
+  font-size: 22px;
+}
+
+.level-form__result p:not(.level-form__result-label) {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.level-form__result small {
+  display: block;
+  margin-top: 12px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .level-assessment {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .level-assessment__intro {
+    position: static;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .level-assessment {
+    gap: 24px;
+    margin-top: 96px;
+    padding: 24px 16px;
+    border-radius: 24px;
+  }
+
+  .level-form {
+    padding: 22px 16px;
+    border-radius: 20px;
+  }
+
+  .level-form__profile-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .level-form__choices {
+    flex-direction: column;
+  }
+
+  .level-form__choices label {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .level-form__submit {
+    transition: none;
+  }
+}
