@@ -1,0 +1,141 @@
+.youtube {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 88px);
+  margin: clamp(88px, 12vw, 152px) 0 0;
+  padding: clamp(36px, 6vw, 80px) clamp(24px, 5vw, 64px);
+  border-radius: 32px;
+  background: #eaf1eb;
+  scroll-margin-top: 32px;
+}
+
+.youtube__content {
+  min-width: 0;
+}
+
+.youtube__eyebrow {
+  margin: 0 0 12px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.youtube__heading {
+  max-width: 560px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(36px, 5vw, 58px);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.youtube__description {
+  max-width: 560px;
+  margin: 20px 0 0;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.youtube__channel-link {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.youtube__logo {
+  width: 24px;
+  height: 17px;
+  flex: 0 0 auto;
+}
+
+.youtube__channel-link:hover {
+  transform: translateY(-2px);
+  background: #c91e32;
+}
+
+.youtube__channel-link:focus-visible,
+.youtube__fallback a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.youtube__video-column {
+  min-width: 0;
+}
+
+.youtube__video {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  background: var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.youtube__video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube__fallback {
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.youtube__fallback a {
+  color: var(--navy);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .youtube {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px;
+  }
+
+  .youtube__video-column {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .youtube {
+    gap: 28px;
+    margin-top: 96px;
+    padding: 26px 20px;
+    border-radius: 24px;
+  }
+
+  .youtube__video {
+    border-radius: 18px;
+  }
+
+  .youtube__channel-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .youtube__channel-link {
+    transition: none;
+  }
+}

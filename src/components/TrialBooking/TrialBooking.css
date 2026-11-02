@@ -1,0 +1,125 @@
+.trial-booking {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  margin-top: clamp(72px, 10vw, 120px);
+  padding: clamp(28px, 6vw, 80px);
+  border-radius: 32px;
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.trial-booking__content {
+  min-width: 0;
+}
+
+.trial-booking__eyebrow {
+  margin: 0 0 12px;
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.trial-booking__heading {
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.trial-booking__description {
+  margin: 18px 0 0;
+  color: #d9e4f0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.trial-booking__benefits {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trial-booking__benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--paper);
+  line-height: 1.5;
+}
+
+.trial-booking__benefits li::before {
+  content: "✓";
+  flex: 0 0 auto;
+  color: var(--yellow);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.trial-booking__calendar {
+  min-width: 0;
+  min-height: 720px;
+  border-radius: 24px;
+  background: var(--cream);
+}
+
+.trial-booking__timezone-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 14px 16px;
+  border: 1px solid rgb(255 201 0 / 60%);
+  border-radius: 14px;
+  background: #fff4c2;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.trial-booking__timezone-notice span:first-child {
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.trial-booking__iframe {
+  display: block;
+  width: 100%;
+  height: 720px;
+  border: 0;
+  border-radius: 24px;
+  background: var(--cream);
+}
+
+@media (max-width: 900px) {
+  .trial-booking {
+    grid-template-columns: 1fr;
+  }
+
+  .trial-booking__calendar {
+    min-height: 720px;
+  }
+}
+
+@media (max-width: 560px) {
+  .trial-booking {
+    gap: 28px;
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .trial-booking__calendar,
+  .trial-booking__iframe {
+    height: 760px;
+    min-height: 760px;
+    border-radius: 18px;
+  }
+}
