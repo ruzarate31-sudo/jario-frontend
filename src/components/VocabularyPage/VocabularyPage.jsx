@@ -48,7 +48,7 @@ function VocabularyPage({
           <div className="results__empty-state">
             <img
               className="results__empty-image"
-              src="/vocabulary-not-found-character.png"
+              src={`${import.meta.env.BASE_URL}vocabulary-not-found-character.png`}
               alt="A confused student looking for a word that was not found"
             />
             <p className="results__message">

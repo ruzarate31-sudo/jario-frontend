@@ -6,7 +6,7 @@ function NotFoundPage() {
     <main className="not-found">
       <img
         className="not-found__image"
-        src="/vocabulary-not-found-character.png"
+        src={`${import.meta.env.BASE_URL}vocabulary-not-found-character.png`}
         alt="A confused student wondering where the page went"
       />
       <h1 className="not-found__heading">Page not found</h1>

@@ -8,7 +8,7 @@ function Header() {
       <Link className="header__logo" to="/" aria-label="JARIO Spanish Academy home">
         <img
           className="header__logo-image"
-          src="/Logo_JARIO.png"
+          src={`${import.meta.env.BASE_URL}Logo_JARIO.png`}
           alt="JARIO Spanish Academy — Spanish with Colombian flavor"
         />
       </Link>

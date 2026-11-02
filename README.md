@@ -13,6 +13,18 @@ npm install
 npm run dev
 ```
 
+## Publicación en GitHub Pages
+
+El flujo de GitHub Actions en `.github/workflows/deploy.yml` compila y publica
+el sitio cuando se integra un cambio en `main`. En el repositorio, abre
+**Settings → Pages** y selecciona **GitHub Actions** como fuente de publicación.
+El sitio del repositorio `jario-frontend` se publica en
+`https://ruzarate31-sudo.github.io/jario-frontend/`.
+
+La ruta base de Vite y React Router está configurada para GitHub Pages. El flujo
+también genera una página de respaldo para que `/vocabulary` y la ruta 404
+funcionen al abrirse directamente.
+
 ## Comandos disponibles
 
 - `npm run dev`: inicia el servidor de desarrollo de Vite.
